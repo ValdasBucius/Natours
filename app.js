@@ -11,6 +11,7 @@ app.use(morgan('dev'));
 
 app.use(express.json());
 app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(express.static(`${__dirname}/public`));
 
 app.use((req, res, next) => {
   console.log('Hello from the middleware🤵');
